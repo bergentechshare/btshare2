@@ -102,7 +102,7 @@ def generate_verification_token():
 def send_verification_email(user):
     verification_link = (
         # f"http://127.0.0.1:5000/verify_email/{user.email_verification_token}"
-        f"btshare.pythonanywhere.com/verify_email/{user.email_verification_token}"
+        f"https://btshare.onrender.com/verify_email/{user.email_verification_token}"
     )
     msg = Message("Verify Your Email", recipients=[user.email])
     msg.body = f"Click the following link to verify your email: {verification_link}"
